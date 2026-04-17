@@ -1,0 +1,23 @@
+name: search
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.11.4
+
+resolution: workspace
+
+dependencies:
+  dio: ^5.9.2
+  flutter:
+    sdk: flutter
+  verion_flutter: any
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true

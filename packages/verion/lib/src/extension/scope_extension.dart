@@ -34,3 +34,18 @@ extension TriggerX on VerionScope {
 extension BatchX on VerionScope {
   void batch(VoidCallback fn) => _scope.scheduler.batch(fn);
 }
+
+extension QueryX on VerionScope {
+  Query<T> query<T>(
+    Future<T> Function(SubscribeContext sub) fn, {
+    bool eager = false,
+    Duration? debounce,
+    String? label,
+  }) => QueryBase(
+    fn,
+    scope: _scope,
+    debounce: debounce,
+    eager: eager,
+    label: label,
+  );
+}

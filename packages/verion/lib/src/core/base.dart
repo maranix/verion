@@ -69,6 +69,9 @@ abstract class ReadableVerion<T> extends VerionBase {
 mixin ListenableVerion<T> on ReadableVerion<T> {
   final List<ValueCallback<T>> _listeners = [];
 
+  @internal
+  bool get hasListeners => _listeners.isNotEmpty;
+
   void addListener(ValueCallback<T> fn) {
     throwOnDisposed("attach listener to");
 

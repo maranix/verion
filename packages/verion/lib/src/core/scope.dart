@@ -1,6 +1,7 @@
 import 'package:meta/meta.dart';
 
 import 'package:verion/src/core/base.dart';
+import 'package:verion/src/core/query.dart';
 import 'package:verion/src/core/scheduler.dart';
 import 'package:verion/src/core/derive.dart';
 import 'package:verion/src/core/source.dart';
